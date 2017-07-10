@@ -528,11 +528,13 @@ void evaluateCommand(uint8_t c) {
         uint16_t a;
         int16_t b;
         uint8_t c;
+        uint32_t d;
       } msp_comp_gps;
       msp_comp_gps.a     = GPS_distanceToHome;
       msp_comp_gps.b     = GPS_directionToHome;
       msp_comp_gps.c     = GPS_update & 1;
-      s_struct((uint8_t*)&msp_comp_gps,5);
+      msp_comp_gps.d     = GPS_time;
+      s_struct((uint8_t*)&msp_comp_gps,9);
       break;
     #if defined(USE_MSP_WP)
     case MSP_SET_NAV_CONFIG:

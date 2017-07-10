@@ -329,7 +329,8 @@ conf_t conf;
   uint16_t GPS_speed;                                   // GPS speed         - unit: cm/s
   uint8_t  GPS_update = 0;                              // a binary toogle to distinct a GPS position update
   uint16_t GPS_ground_course = 0;                       //                   - unit: degree*10
-
+  uint32_t GPS_time;
+  
   //uint8_t GPS_mode  = GPS_MODE_NONE; // contains the current selected gps flight mode --> moved to the f. structure
   uint8_t NAV_state = 0; // NAV_STATE_NONE;  /// State of the nav engine
   uint8_t NAV_error = 0; // NAV_ERROR_NONE;
